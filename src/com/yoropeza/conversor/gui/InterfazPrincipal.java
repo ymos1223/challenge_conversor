@@ -41,6 +41,7 @@ public class InterfazPrincipal extends JFrame{
 		setTitle("CONVERSOR");
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(246, 97, 81));
+		setBounds(100, 100, 785, 231);
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		setResizable(false);
@@ -49,7 +50,7 @@ public class InterfazPrincipal extends JFrame{
 		titulo.setForeground(new Color(255, 255, 255));
 		titulo.setFont(new Font("Roboto", Font.BOLD, 19));
 		titulo.setHorizontalAlignment(SwingConstants.CENTER);
-		titulo.setBounds(236, 22, 200, 15);
+		titulo.setBounds(269, 12, 200, 15);
 		contentPane.add(titulo);
 		
 		JButton btnDivisa = new JButton("Divisa");
@@ -64,7 +65,7 @@ public class InterfazPrincipal extends JFrame{
 			}
 		});
 		btnDivisa.setBackground(new Color(143, 240, 164));
-		btnDivisa.setBounds(142, 72, 139, 25);
+		btnDivisa.setBounds(115, 72, 139, 25);
 		contentPane.add(btnDivisa);
 		
 		JButton btnTemp = new JButton("Temperatura");
@@ -77,7 +78,7 @@ public class InterfazPrincipal extends JFrame{
 			}
 		});
 		btnTemp.setBackground(new Color(143, 240, 164));
-		btnTemp.setBounds(351, 72, 139, 25);
+		btnTemp.setBounds(301, 72, 139, 25);
 		contentPane.add(btnTemp);
 		
 		JButton btnTiempo = new JButton("Tiempo");
@@ -91,9 +92,9 @@ public class InterfazPrincipal extends JFrame{
 			}
 		});
 		btnTiempo.setBackground(new Color(143, 240, 164));
-		btnTiempo.setBounds(246, 121, 139, 25);
+		btnTiempo.setBounds(487, 72, 139, 25);
 		contentPane.add(btnTiempo);
-		setBounds(100, 100, 650, 250);
+		setBounds(100, 100, 758, 248);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 	

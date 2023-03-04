@@ -187,17 +187,6 @@ public class InterfazTiempo extends JFrame{
 		lblA.setFont(new Font("Dialog", Font.BOLD, 14));
 		lblA.setBounds(512, 45, 50, 15);
 		contentPane.add(lblA);
-		
-		lista2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				if (lista1.getSelectedItem().equals(lista2.getSelectedItem())) {
-					btnConvertir.setEnabled(false);
-					JOptionPane.showMessageDialog(null, "Debe seleccionar unidades de tiempo distintas");
-				} else {
-					btnConvertir.setEnabled(true);
-				}
-			}
-		});
 	}
 }
 

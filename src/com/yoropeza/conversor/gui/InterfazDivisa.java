@@ -128,10 +128,19 @@ public class InterfazDivisa extends JFrame {
 		contentPane.add(lista1);
 		contentPane.add(lista2);
 
-		JLabel flecha = new JLabel("=>");
-		flecha.setFont(new Font("Dialog", Font.BOLD, 24));
-		flecha.setBounds(448, 65, 60, 25);
-		contentPane.add(flecha);
+		JButton cambiar = new JButton("⇌");
+		cambiar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			int aux=lista1.getSelectedIndex();
+			int aux2=lista2.getSelectedIndex();
+			lista1.setSelectedIndex(aux2);
+			lista2.setSelectedIndex(aux);
+			}
+		});
+		cambiar.setFont(new Font("Dialog", Font.BOLD, 14));
+		cambiar.setBounds(448, 65, 50, 25);
+		contentPane.add(cambiar);
+		
 
 		resultado = new JLabel("");
 		resultado.setBounds(269, 120, 393, 15);
@@ -176,17 +185,5 @@ public class InterfazDivisa extends JFrame {
 		lblA.setFont(new Font("Dialog", Font.BOLD, 14));
 		lblA.setBounds(511, 45, 50, 15);
 		contentPane.add(lblA);
-		
-		lista2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				if (lista1.getSelectedItem().equals(lista2.getSelectedItem())) {
-					btnConvertir.setEnabled(false);
-					JOptionPane.showMessageDialog(null, "Debe seleccionar Divisas distintas");
-				} else {
-					btnConvertir.setEnabled(true);
-				}
-			}
-		});
-		
 	}
 }

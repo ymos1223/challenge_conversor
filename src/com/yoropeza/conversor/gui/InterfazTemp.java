@@ -201,16 +201,5 @@ public class InterfazTemp extends JFrame {
 		cambiar.setFont(new Font("Dialog", Font.BOLD, 14));
 		cambiar.setBounds(448, 65, 50, 25);
 		contentPane.add(cambiar);
-		
-		lista2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				if (lista1.getSelectedItem().equals(lista2.getSelectedItem())) {
-					btnConvertir.setEnabled(false);
-					JOptionPane.showMessageDialog(null, "Debe seleccionar Temperaturas distintas");
-				} else {
-					btnConvertir.setEnabled(true);
-				}
-			}
-		});
 	}
 }

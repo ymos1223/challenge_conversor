@@ -17,6 +17,10 @@ public double convertir() {
 	
 	double resultConversion=0.0;
 	
+	if (de.getNombre().equals(para.getNombre())) {
+		resultConversion=de.getValor();
+	} else {
+	
 	switch (de.getNombre()) {
 		
 	case "Fahrenheit" :
@@ -47,6 +51,7 @@ public double convertir() {
 		
 		break;
 	
+	}
 	}
 
 	return resultConversion;

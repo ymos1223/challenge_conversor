@@ -1,5 +1,6 @@
 package com.yoropeza.conversor.utils;
 
+
 import javax.swing.JOptionPane;
 
 import com.yoropeza.conversor.models.Tiempo;
@@ -15,9 +16,11 @@ public class ConversorTiempo {
 		
 		double resultConversion = 0.0;
 		
-		if (de.getValor()==0) {
-			JOptionPane.showMessageDialog(null, "Debe ingresar un valor distinto a 0");
-		}
+		if (de.getNombre().equals(para.getNombre())) {
+			resultConversion=de.getValor();
+		} else if (de.getValor()==0){
+		JOptionPane.showMessageDialog(null, "Debe ingresar un valor distinto a cero");
+		} else {
 
 		switch (de.getNombre()) {
 
@@ -90,10 +93,10 @@ public class ConversorTiempo {
 			break;
 
 		}
-
+		}
 		return resultConversion;
-
 	}
+
 
 	public Tiempo getDe() {
 		return de;
